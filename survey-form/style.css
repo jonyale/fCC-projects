@@ -9,12 +9,14 @@ https://css-tricks.com/best-way-implement-wrapper-css/
   --color-darkblue: #1b1b32;
   --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
   --color-blue: #0627e0;
+  box-sizing: border-box;
 }
 
+/* Option to use content-box without worrying about a universal selector overriding CSS. */
 *,
-*::before,
-*::after {
-  box-sizing: border-box;
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -27,7 +29,7 @@ body {
 }
 
 /* mobile friendly alternative to using background-attachment: fixed */
-body::before {
+body:before {
   content: '';
   position: fixed;
   top: 0;
