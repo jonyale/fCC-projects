@@ -1,0 +1,1 @@
+console.log('bellwether : one that takes the lead or initiative : leader; also : an indicator of trends')
